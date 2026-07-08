@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Detalhamento dos Modelos de Robôs Industriais</title>
 </head>
 <body>
     <section>
@@ -13,6 +13,7 @@
             </h1>
         </div>
     </section><br><br>
+
     <section>
         <div id="div_text">
             <h2>
@@ -37,7 +38,8 @@
             <i>(Muitos robôs cartesianos também operam via G-Code).</i>
             </p>
         </div>
-       </section>
+    </section>
+
     <section>
         <div id="div_text">
             <h2>
@@ -46,8 +48,8 @@
             <p>
             <h3>Conceito:</h3>
             Possui duas juntas rotativas paralelas que fornecem flexibilidade (conformidade) no plano horizontal (X e Y), mas rigidez no eixo vertical (Z).
-            <h3>Aplicações:</h3>
-            Soldagem a arco, pintura, usinagem, montagem automotiva e paletização.
+            <h3>Princípio de funcionamento:</h3>
+            A flexibilidade no plano horizontal, combinada com a rigidez vertical, permite movimentos rápidos e precisos no mesmo plano.
             <h3>Características técnicas:</h3>
             Altíssima velocidade, excelente precisão para trabalhos planos, design compacto.
             <h3>Aplicações:</h3>
@@ -55,11 +57,137 @@
             <h3>Integração (IoT):</h3>
             Monitoramento de ciclos de alta velocidade e análise de vibração para evitar paradas inesperadas.
             <h3>Marcas e Linguagens de Programação:</h3>
-            Epson: Utiliza a linguagem SPEL+ (uma linguagem estruturada semelhante ao Basic/C). <br>
-            Omron (Adept): Utiliza a linguagem V+. <br>
-            Yamaha: Linguagem própria (RCX-Studio). 
+            1) Epson: Utiliza a linguagem SPEL+ (uma linguagem estruturada semelhante ao Basic/C). <br>
+            2) Omron (Adept): Utiliza a linguagem V+. <br>
+            3) Yamaha: Linguagem própria (RCX-Studio).
             </p>
         </div>
-       </section>
+    </section>
+
+    <section>
+        <div id="div_text">
+            <h2>
+                Robô Articulado
+            </h2>
+            <p>
+            <h3>Conceito:</h3>
+            O robô mais comum da indústria, cujo design mecânico lembra um braço humano.
+            <br>
+            <h3>Princípio de funcionamento:</h3>
+            Composto por uma série de juntas rotativas (geralmente de 4 a 6 eixos) ligadas por "braços", permitindo ampla liberdade de movimento.
+            <h3>Características técnicas:</h3>
+            Extrema flexibilidade, capacidade de alcançar lugares difíceis, grande variedade de tamanhos e capacidades de carga.
+            <h3>Aplicações:</h3>
+            Soldagem a arco, pintura, usinagem, montagem automotiva e paletização.
+            <h3>Integração (IoT):</h3>
+            Gêmeos digitais (Digital Twins) onde o braço virtual na nuvem replica o braço físico para simular e otimizar trajetórias de solda, por exemplo.
+            <h3>Marcas e Linguagens de Programação:</h3>
+            1) KUKA: Utiliza a linguagem KRL (KUKA Robot Language).<br>
+            2) ABB: Utiliza a linguagem RAPID.<br>
+            3) FANUC: Utiliza a linguagem Karel (para lógica complexa) e programação via Teach Pendant (TP).
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div id="div_text">
+            <h2>
+                Robô Cilíndrico
+            </h2>
+            <p>
+            <h3>Conceito:</h3>
+            Baseado no sistema de coordenadas cilíndricas. Possui uma junta rotativa na base e duas juntas lineares (prismáticas) para altura e alcance.
+            <br>
+            <h3>Princípio de funcionamento:</h3>
+            A combinação da rotação na base com o deslocamento linear forma um volume de trabalho em formato de cilindro.
+            <h3>Características técnicas:</h3>
+            Espaço de trabalho em formato de cilindro, design vertical rígido, bom para cavidades profundas. Hoje em dia é menos comum, substituído muitas vezes por robôs SCARA ou articulados.
+            <h3>Aplicações:</h3>
+            Alimentação de máquinas-ferramenta, fundição sob pressão e operações simples de montagem.
+            <h3>Integração (IoT):</h3>
+            Monitoramento de atuadores pneumáticos/hidráulicos que geralmente movem seus eixos lineares.
+            <h3>Marcas e Linguagens de Programação:</h3>
+            1) SMC / Parker Hannifin: Como são frequentemente montados a partir de atuadores modulares, são programados por Controladores Lógicos Programáveis (CLPs) usando Ladder, Texto Estruturado (ST) ou C/C++. <br>
+            <i>(Nota: Por ser um modelo antigo/específico, os fabricantes atuais focam em módulos que compõem o robô).</i>
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div id="div_text">
+            <h2>
+                Robô Delta
+            </h2>
+            <p>
+            <h3>Conceito:</h3>
+            Robô de cinemática paralela, formato de "aranha". Consiste em três (ou mais) braços articulados conectados a uma única junta universal na base superior (geralmente fixada no teto).
+            <br>
+            <h3>Princípio de funcionamento:</h3>
+            Os motores ficam na base fixa, tornando a ferramenta móvel extremamente leve, o que permite altíssimas acelerações e velocidades.
+            <h3>Características técnicas:</h3>
+            Estrutura leve e rígida com movimentação extremamente rápida, ideal para operações repetitivas de curta duração.
+            <h3>Aplicações:</h3>
+            Indústria alimentícia (seleção e empacotamento), farmacêutica e triagem rápida em esteiras.
+            <h3>Integração (IoT):</h3>
+            Altamente integrado a sistemas de visão computacional baseados em IA/IoT para reconhecer produtos imperfeitos na esteira em tempo real.
+            <h3>Marcas e Linguagens de Programação:</h3>
+            1) ABB (FlexPicker): Programado em RAPID.<br>
+            2) FANUC (Série M): Programado em Karel / TP.<br>
+            3) Omron (Quattro): Programado na linguagem V+.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div id="div_text">
+            <h2>
+                Robô Polar (Esférico)
+            </h2>
+            <p>
+            <h3>Conceito:</h3>
+            Seus eixos formam um sistema de coordenadas esféricas, utilizando duas juntas rotativas e uma linear. O braço pode apontar para quase qualquer lugar em uma esfera ao seu redor.
+            <br>
+            <h3>Princípio de funcionamento:</h3>
+            A combinação de duas rotações e um deslocamento linear permite que o braço alcance qualquer ponto dentro de um raio esférico.
+            <h3>Características técnicas:</h3>
+            Grande alcance horizontal e vertical. Foi o primeiro tipo de robô industrial criado, mas hoje é considerado obsoleto para novas instalações, sendo substituído pelos articulados.
+            <h3>Aplicações (Históricas):</h3>
+            Soldagem a ponto em carros, injeção de plásticos e forjamento.
+            <h3>Integração (IoT):</h3>
+            Retrofit de sensores em robôs polares antigos para conectá-los a redes modernas industriais.
+            <h3>Marcas e Linguagens de Programação:</h3>
+            1) Unimation (Histórico): Usava a linguagem VAL (Victor's Assembly Language).<br>
+            2) Kawasaki (Modelos baseados no esférico): Usa a AS Language.<br>
+            <i>(Nota: por ser um modelo obsoleto, poucos fabricantes atuais mantêm linhas ativas neste formato).</i>
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div id="div_text">
+            <h2>
+                Robô Colaborativo (Cobot)
+            </h2>
+            <p>
+            <h3>Conceito:</h3>
+            Robôs projetados para operar no mesmo espaço de trabalho que humanos, sem a necessidade de cercas de segurança.
+            <br>
+            <h3>Princípio de funcionamento:</h3>
+            Utiliza sensores de torque limitadores de força e impacto. Ao menor choque inesperado, o robô para instantaneamente.
+            <h3>Características técnicas:</h3>
+            Programação simplificada (frequentemente guiando o braço com as mãos), design leve, bordas arredondadas e foco absoluto em segurança.
+            <h3>Aplicações:</h3>
+            Inspeção de qualidade, empacotamento, assistência em cirurgias, atendimento e suporte na montagem junto ao operador humano.
+            <h3>Integração (IoT):</h3>
+            Sensores de presença na nuvem, envio de relatórios de produtividade colaborativa para plataformas de análise em tempo real.
+            <h3>Marcas e Linguagens de Programação:</h3>
+            1) Universal Robots: Utiliza URScript (baseado em Python) e interface visual PolyScope.<br>
+            2) Doosan Robotics: Software DART, com suporte forte a C++ e Python (via ROS).<br>
+            3) Techman Robot: TMflow (interface visual baseada em fluxogramas).<br>
+            <i>(Nota: Cobots frequentemente suportam integração direta com ROS - Robot Operating System, usando Python/C++).</i>
+            </p>
+        </div>
+    </section>
+
 </body>
 </html>
